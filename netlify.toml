@@ -1,0 +1,31 @@
+# netlify.toml
+
+# Build settings
+[build]
+  # The command to build your project
+  command = "npm run build"
+  # The directory where the built project files are located
+  publish = "build"
+
+# If you're using React Router and want to enable history pushstate
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Optional: Basic headers configuration
+[[headers]]
+  # Define which paths these headers apply to
+  for = "/*"
+    [headers.values]
+    # Cache control for static files (e.g., CSS, JS)
+    Cache-Control = "public, max-age=0, must-revalidate"
+    # Optional: Add more headers as needed
+
+# Optional: Basic redirects configuration
+[[redirects]]
+  # Redirect all HTTP traffic to HTTPS
+  from = "/*"
+  to = "https://yourdomain.com/:splat"
+  status = 301
+  force = true
