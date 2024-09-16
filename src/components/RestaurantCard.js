@@ -21,7 +21,10 @@ const RestaurantCard = (props) => {
   const { header, subHeader } = aggregatedDiscountInfoV3 ?? "";
 
   return (
-    <div className="border border-gray-400 rounded-xl mx-auto p-2 min-w-[200] max-w-[200] sm:min-w-[230] sm:max-w-[230] lg:min-w-[250] lg:max-w-[250]">
+    <div
+      className="border border-gray-400 rounded-xl mx-auto p-2 
+     sm:min-w-[230] sm:max-w-[230] lg:min-w-[250] lg:max-w-[250]"
+    >
       <Link to={"/restaurants/" + id + "/" + name}>
         <div className="relative">
           <p className="absolute w-[100%]  sm:h-[180] lg:h-[180] rounded-xl bg-gradient-to-t from-black  to-transparent "></p>
